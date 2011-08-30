@@ -24,16 +24,10 @@ $SWBOC_Common = new SWBOC_Common();
 
 add_action( 'init', array ( $SWBOC_Common, 'create_swboc_type' ) );
 
-function update_swboc_database() {
-	$db_version = get_option( 'swboc_database_version' );
-	
-	if ( $db_version != '' || $db_version < 2 ) {
-		global $wpdb;
-		$wpdb->update( $wpdb->posts, array( 'post_type' => 'smartblock' ), array( 'post_type' => 'Smart Block' ) );
-		update_option( 'swboc_database_version', 2 );
-	}
-}
+include( 'includes/class-swboc-admin.php' );
 
-add_action( 'admin_init', 'update_swboc_database' );
+$SWBOC_Admin = new SWBOC_Admin();
+
+add_action( 'admin_init', array ( $SWBOC_Admin, 'update_swboc_database' ) );
 
 ?>
