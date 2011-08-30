@@ -16,9 +16,7 @@ if ( is_admin() ) {
 	$SWBOC_Front = new SWBOC_Front();	
 }
 
-include( 'includes/class-swboc-widget.php' );
 
-add_action( 'widgets_init', create_function( '', "register_widget( 'SWBOC_Widget' );" ) );
 
 include( 'includes/class-swboc-common.php' );
 
