@@ -8,11 +8,13 @@ Version: 0.5
 Author URI: http://cnjcbs.com
 */
 
-include( 'includes/class-swboc-front.php' );
-
-$SWBOC_Front = new SWBOC_Front();
-
-add_shortcode( 'smartblock', array ( $SWBOC_Front, 'swboc_shortcode' ) );
+if ( is_admin() ) {
+	include( 'includes/class-swboc-admin.php' );
+	$SWBOC_Admin = new SWBOC_Admin();
+} else {
+	include( 'includes/class-swboc-front.php' );
+	$SWBOC_Front = new SWBOC_Front();	
+}
 
 include( 'includes/class-swboc-widget.php' );
 
@@ -23,11 +25,5 @@ include( 'includes/class-swboc-common.php' );
 $SWBOC_Common = new SWBOC_Common();
 
 add_action( 'init', array ( $SWBOC_Common, 'create_swboc_type' ) );
-
-include( 'includes/class-swboc-admin.php' );
-
-$SWBOC_Admin = new SWBOC_Admin();
-
-add_action( 'admin_init', array ( $SWBOC_Admin, 'update_swboc_database' ) );
 
 ?>

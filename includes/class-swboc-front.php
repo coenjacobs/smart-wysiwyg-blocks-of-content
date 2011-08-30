@@ -1,6 +1,10 @@
 <?php
 
 class SWBOC_Front {
+	function SWBOC_Front() {
+		add_shortcode( 'smartblock', array ( $this, 'swboc_shortcode' ) );
+	}
+	
 	function swboc_shortcode( $atts ) {
 		extract( shortcode_atts( array (
 			'id' => '',

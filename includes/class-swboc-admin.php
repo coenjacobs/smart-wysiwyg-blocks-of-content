@@ -1,6 +1,10 @@
 <?php
 
 class SWBOC_Admin {
+	function SWBOC_Admin() {
+		add_action( 'admin_init', array ( $this, 'update_swboc_database' ) );
+	}
+	
 	function update_swboc_database() {
 		$db_version = get_option( 'swboc_database_version' );
 	
