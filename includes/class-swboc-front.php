@@ -1,7 +1,12 @@
 <?php
 
 class SWBOC_Front {
+	private $common;
+	
 	function SWBOC_Front() {
+		include( 'class-swboc-common.php' );
+		$this->common = new SWBOC_Common();
+		
 		add_shortcode( 'smartblock', array ( $this, 'swboc_shortcode' ) );
 	}
 	

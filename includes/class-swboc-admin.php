@@ -1,7 +1,12 @@
 <?php
 
 class SWBOC_Admin {
+	private $common;
+	
 	function SWBOC_Admin() {
+		include( 'class-swboc-common.php' );
+		$this->common = new SWBOC_Common();
+		
 		add_action( 'admin_init', array ( $this, 'update_swboc_database' ) );
 	}
 	

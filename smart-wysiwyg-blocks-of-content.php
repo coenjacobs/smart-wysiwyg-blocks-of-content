@@ -16,12 +16,4 @@ if ( is_admin() ) {
 	$SWBOC_Front = new SWBOC_Front();	
 }
 
-
-
-include( 'includes/class-swboc-common.php' );
-
-$SWBOC_Common = new SWBOC_Common();
-
-add_action( 'init', array ( $SWBOC_Common, 'create_swboc_type' ) );
-
 ?>
