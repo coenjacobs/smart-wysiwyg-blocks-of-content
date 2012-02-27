@@ -3,8 +3,8 @@ Contributors: coenjacobs
 Donate link: http://cnjcbs.com/donate
 Tags: wysiwyg, widgets
 Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: 0.5.1
+Tested up to: 3.3.1
+Stable tag: 0.5.2
 
 Adds a custom post type that can be easily inserted at multiple spots, including widgets. Easy way to create WYSIWYG widgets.
 
@@ -29,8 +29,11 @@ Adds a custom post type that can be easily inserted at multiple spots, including
 
 == Changelog ==
 
+= 0.5.2 =
+* Get and restore $post global var to make sure the_content filters use the correct post (Thanks Danny de Haan!).
+
 = 0.5.1 =
-* Split classes to external files and updated to WordPress coding standards
+* Split classes to external files and updated to WordPress coding standards.
 
 = 0.5 =
 * Switched to get_posts instead of query_posts. Should help some users problems with breaking loops.
