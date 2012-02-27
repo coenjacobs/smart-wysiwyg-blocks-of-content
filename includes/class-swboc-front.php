@@ -18,7 +18,7 @@ class SWBOC_Front {
 		$content = "";
 
 		global $post;
-		$post = $temp;
+		$temp = $post;
 	
 		if ( $id != "" ) {
 			$args = array (
@@ -33,7 +33,7 @@ class SWBOC_Front {
 			}
 		}
 
-		$temp = $post;
+		$post = $temp;
 	
 		return $content;
 	}
