@@ -16,6 +16,9 @@ class SWBOC_Front {
 		), $atts ) );
 	
 		$content = "";
+
+		global $post;
+		$post = $temp;
 	
 		if ( $id != "" ) {
 			$args = array (
@@ -29,6 +32,8 @@ class SWBOC_Front {
 				$content .= apply_filters( 'the_content', $post->post_content );
 			}
 		}
+
+		$temp = $post;
 	
 		return $content;
 	}
