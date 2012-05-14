@@ -28,9 +28,13 @@ class SWBOC_Front {
 		
 			$swboc_posts = get_posts( $args );
 		
+			remove_filter( 'the_content', 'prepend_attachment' );
+
 			foreach ( $swboc_posts as $post ) {
 				$content .= apply_filters( 'the_content', $post->post_content );
 			}
+
+			add_filter( 'the_content', 'prepend_attachment' );
 		}
 
 		$post = $temp;

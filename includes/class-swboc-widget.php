@@ -22,10 +22,14 @@ class SWBOC_Widget extends WP_Widget {
 		);
 		
 		$swboc_posts = get_posts( $args );
+
+		remove_filter( 'the_content', 'prepend_attachment' );
 		
 		foreach ( $swboc_posts as $post ) {
 			echo apply_filters( 'the_content', $post->post_content );
 		}
+
+		add_filter( 'the_content', 'prepend_attachment' );
 
 		echo $after_widget;
 	}
