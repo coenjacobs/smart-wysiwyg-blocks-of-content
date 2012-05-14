@@ -3,8 +3,8 @@ Contributors: CoenJacobs
 Donate link: http://cnjcbs.com/donate
 Tags: wysiwyg, widgets
 Requires at least: 3.0
-Tested up to: 3.3.1
-Stable tag: 0.5.2
+Tested up to: 3.4
+Stable tag: 0.6
 
 Adds a custom post type that can be easily inserted at multiple spots, including widgets. Easy way to create WYSIWYG widgets.
 
@@ -28,6 +28,10 @@ Adds a custom post type that can be easily inserted at multiple spots, including
 1. Adding Smart Blocks via the menu item
 
 == Changelog ==
+
+= 0.6 =
+* Do not show widget title if title is empty.
+* Temporarely disable prepend_attachment filter to prevent strange output.
 
 = 0.5.2 =
 * Get and restore $post global var to make sure the_content filters use the correct post (Thanks Danny de Haan!).
