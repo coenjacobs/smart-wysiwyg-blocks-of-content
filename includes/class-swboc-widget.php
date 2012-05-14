@@ -13,7 +13,8 @@ class SWBOC_Widget extends WP_Widget {
 		$swboc_id    = esc_attr( $instance[ 'swboc_id' ] );
 		$swboc_title = esc_attr( $instance[ 'title' ] );
 		
-		echo $before_title . $swboc_title . $after_title;
+		if ( ! empty( $swboc_title ) )
+			echo $before_title . $swboc_title . $after_title;
 		
 		$args = array (
 			'post__in'  => array ( $swboc_id ),
