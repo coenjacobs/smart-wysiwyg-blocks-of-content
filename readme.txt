@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: CoenJacobs
-Donate link: http://cnjcbs.com/donate
+Donate link: http://coenjacobs.me/donate
 Tags: wysiwyg, widgets
 Requires at least: 3.0
 Tested up to: 3.4
@@ -28,6 +28,9 @@ Adds a custom post type that can be easily inserted at multiple spots, including
 1. Adding Smart Blocks via the menu item
 
 == Changelog ==
+
+= Future release =
+* Added textdomain to translation strings
 
 = 0.6 =
 * Do not show widget title if title is empty.

@@ -2,8 +2,8 @@
 
 class SWBOC_Widget extends WP_Widget {
 	function SWBOC_Widget() {
-		$widget_ops = array( 'classname' => 'SWBOC_Widget', 'description' => 'Widget to show a Smart WYSIWYG Block of Content' );
-		$this->WP_Widget( 'swboc', 'SWBOC Widget', $widget_ops );
+		$widget_ops = array( 'classname' => 'SWBOC_Widget', 'description' => __( 'Widget to show a Smart WYSIWYG Block of Content', 'swboc' ) );
+		$this->WP_Widget( 'swboc', __( 'SWBOC Widget', 'swboc' ), $widget_ops );
 	}
 
 	function widget( $args, $instance ) {
@@ -46,10 +46,10 @@ class SWBOC_Widget extends WP_Widget {
 		$swboc_id    = esc_attr( $instance[ 'swboc_id' ] );
 		$swboc_title = esc_attr( $instance[ 'title' ] ); ?>
 		
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>">Title:
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'swboc' ); ?>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $swboc_title; ?>" /></label>
 		
-		<label for="<?php echo $this->get_field_id( 'swboc_id' ); ?>">Smart block:
+		<label for="<?php echo $this->get_field_id( 'swboc_id' ); ?>"><?php _e( 'Smart block:', 'swboc' ); ?>
 		<select class="widefat" id="<?php echo $this->get_field_id( 'swboc_id'); ?>" name="<?php echo $this->get_field_name( 'swboc_id' ); ?>">
 		
 		<?php
