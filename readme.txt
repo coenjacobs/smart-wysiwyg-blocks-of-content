@@ -31,6 +31,7 @@ Adds a custom post type that can be easily inserted at multiple spots, including
 
 = Future release =
 * Added textdomain to translation strings
+* Isset functions to check values in widget form
 
 = 0.6 =
 * Do not show widget title if title is empty.
