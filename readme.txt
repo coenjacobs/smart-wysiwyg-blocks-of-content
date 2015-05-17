@@ -4,7 +4,7 @@ Donate link: http://coenjacobs.me/about#donate
 Tags: wysiwyg, widgets
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 0.6
+Stable tag: 0.6.1
 
 Adds a custom post type that can be easily inserted at multiple spots, including widgets. Easy way to create WYSIWYG widgets.
 
@@ -35,7 +35,7 @@ This WordPress Codex has really good documentation on [Installing plugins](https
 
 == Changelog ==
 
-= 0.6.1 =
+= 0.6.1 - 17/05/2015 =
 * This plugin is still alive. Verified it still works on WordPress 4.2.2.
 * Fix: Isset check to check values in widget form to prevent notices
 
