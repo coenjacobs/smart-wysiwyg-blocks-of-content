@@ -1,0 +1,2 @@
+# Smart WYSIWYG Blocks Of Content
+This is the development repository of the plugin. Please use the [download page](https://wordpress.org/plugins/smart-wysiwyg-blocks-of-content/) to get a installable copy. Also please use the [support forums](https://wordpress.org/support/plugin/smart-wysiwyg-blocks-of-content) to request support, do not use the issues on this repository for support.
