@@ -10,8 +10,8 @@ class SWBOC_Widget extends WP_Widget {
 		extract( $args, EXTR_SKIP );
 		echo $before_widget;
 		
-		$swboc_id    = esc_attr( $instance[ 'swboc_id' ] );
-		$swboc_title = esc_attr( $instance[ 'title' ] );
+		$swboc_id    = ( isset( $instance[ 'swboc_id' ] ) ) ? esc_attr( $instance[ 'swboc_id' ] ) : '';
+		$swboc_title = ( isset( $instance[ 'title' ] ) ) ? esc_attr( $instance[ 'title' ] ) : '';
 		
 		if ( ! empty( $swboc_title ) )
 			echo $before_title . $swboc_title . $after_title;
@@ -43,8 +43,9 @@ class SWBOC_Widget extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$swboc_id    = esc_attr( $instance[ 'swboc_id' ] );
-		$swboc_title = esc_attr( $instance[ 'title' ] ); ?>
+		$swboc_id    = ( isset( $instance[ 'swboc_id' ] ) ) ? esc_attr( $instance[ 'swboc_id' ] ) : '';
+		$swboc_title = ( isset( $instance[ 'title' ] ) ) ? esc_attr( $instance[ 'title' ] ) : '';
+		?>
 		
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>">Title:
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $swboc_title; ?>" /></label>
