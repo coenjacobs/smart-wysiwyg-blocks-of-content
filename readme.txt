@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: CoenJacobs
-Donate link: http://cnjcbs.com/donate
+Donate link: http://coenjacobs.me/about#donate
 Tags: wysiwyg, widgets
 Requires at least: 3.0
 Tested up to: 4.2.2
