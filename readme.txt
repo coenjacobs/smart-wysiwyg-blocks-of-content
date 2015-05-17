@@ -12,6 +12,10 @@ Adds a custom post type that can be easily inserted at multiple spots, including
 
 Adds a custom post type that can be easily inserted at multiple spots, including widgets. Easy way to create WYSIWYG widgets.
 
+This plugin is still alive. It has been tested to run on the most recent WordPress version and it still works fine. Future versions will bring more features and an updated code base.
+
+Please use the [support forums](https://wordpress.org/support/plugin/smart-wysiwyg-blocks-of-content) to request support in case you have some kind of trouble. You can contribute to the plugin via the [GitHub repository](https://github.com/coenjacobs/smart-wysiwyg-blocks-of-content). Pull requests or bug reports are very welcome there.
+
 == Installation ==
 
 1. Upload `smart-wysiwyg-blocks-of-content` folder to the `/wp-content/plugins/` directory
