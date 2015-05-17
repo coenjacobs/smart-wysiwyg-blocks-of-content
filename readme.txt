@@ -18,6 +18,8 @@ Please use the [support forums](https://wordpress.org/support/plugin/smart-wysiw
 
 == Installation ==
 
+This WordPress Codex has really good documentation on [Installing plugins](https://codex.wordpress.org/Managing_Plugins#Installing_Plugins). In short:
+
 1. Upload `smart-wysiwyg-blocks-of-content` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Add a Smart Block, using the added menu item `Smart Blocks`
