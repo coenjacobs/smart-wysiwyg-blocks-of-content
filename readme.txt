@@ -3,7 +3,7 @@ Contributors: CoenJacobs
 Donate link: http://cnjcbs.com/donate
 Tags: wysiwyg, widgets
 Requires at least: 3.0
-Tested up to: 3.4
+Tested up to: 4.2.2
 Stable tag: 0.6
 
 Adds a custom post type that can be easily inserted at multiple spots, including widgets. Easy way to create WYSIWYG widgets.
@@ -28,6 +28,10 @@ Adds a custom post type that can be easily inserted at multiple spots, including
 1. Adding Smart Blocks via the menu item
 
 == Changelog ==
+
+= 0.6.1 =
+* This plugin is still alive. Verified it still works on WordPress 4.2.2.
+* Fix: Isset check to check values in widget form to prevent notices
 
 = 0.6 =
 * Do not show widget title if title is empty.
