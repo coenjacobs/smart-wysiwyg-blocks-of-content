@@ -6,6 +6,8 @@ class SWBOC_Front {
 	function SWBOC_Front() {
 		include( 'class-swboc-common.php' );
 		$this->common = new SWBOC_Common();
+
+		new CoenJacobs\SWBOC\PostTypes();
 		
 		add_shortcode( 'smartblock', array ( $this, 'swboc_shortcode' ) );
 	}

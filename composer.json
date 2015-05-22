@@ -7,6 +7,9 @@
             "email": "coenjacobs@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {"CoenJacobs\\SWBOC\\": "src/"}
+    },
     "require": {
         "WPUpdatePhp/wp-update-php": "^1.0"
     }

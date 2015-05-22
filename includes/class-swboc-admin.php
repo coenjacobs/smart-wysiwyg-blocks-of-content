@@ -6,6 +6,8 @@ class SWBOC_Admin {
 	function SWBOC_Admin() {
 		include( 'class-swboc-common.php' );
 		$this->common = new SWBOC_Common();
+
+		new CoenJacobs\SWBOC\PostTypes();
 		
 		add_action( 'admin_init', array ( $this, 'update_swboc_database' ) );
 	}
