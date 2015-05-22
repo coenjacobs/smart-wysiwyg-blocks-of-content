@@ -1,18 +1,13 @@
-<?php
+<?php namespace CoenJacobs\SWBOC;
 
-class SWBOC_Front {
-	private $common;
-	
-	function SWBOC_Front() {
-		include( 'class-swboc-common.php' );
-		$this->common = new SWBOC_Common();
-
-		new CoenJacobs\SWBOC\PostTypes();
+class Front extends Common {	
+	public function __construct() {
+		parent::__construct();
 		
 		add_shortcode( 'smartblock', array ( $this, 'swboc_shortcode' ) );
 	}
 	
-	function swboc_shortcode( $atts ) {
+	public function swboc_shortcode( $atts ) {
 		extract( shortcode_atts( array (
 			'id' => '',
 		), $atts ) );
