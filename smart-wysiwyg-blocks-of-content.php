@@ -8,10 +8,10 @@ Version: 1.0.0-bleeding
 Author URI: http://coenjacobs.me
 */
 
+require( 'vendor/autoload.php' );
+
 if ( is_admin() ) {
-	include( 'includes/class-swboc-admin.php' );
-	$SWBOC_Admin = new SWBOC_Admin();
+	new CoenJacobs\SWBOC\Admin();
 } else {
-	include( 'includes/class-swboc-front.php' );
-	$SWBOC_Front = new SWBOC_Front();	
+	new CoenJacobs\SWBOC\Front();	
 }
