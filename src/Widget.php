@@ -1,12 +1,12 @@
-<?php
+<?php namespace CoenJacobs\SWBOC;
 
-class SWBOC_Widget extends WP_Widget {
-	function SWBOC_Widget() {
+class Widget extends \WP_Widget {
+	public function SWBOC_Widget() {
 		$widget_ops = array( 'classname' => 'SWBOC_Widget', 'description' => __( 'Widget to show a Smart WYSIWYG Block of Content', 'swboc' ) );
 		$this->WP_Widget( 'swboc', __( 'SWBOC Widget', 'swboc' ), $widget_ops );
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args, EXTR_SKIP );
 		echo $before_widget;
 		
@@ -34,7 +34,7 @@ class SWBOC_Widget extends WP_Widget {
 		echo $after_widget;
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$this->title = esc_attr( $instance[ 'title' ] );
 		
 		$updated_instance = $new_instance;
@@ -42,7 +42,7 @@ class SWBOC_Widget extends WP_Widget {
 		return $updated_instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$swboc_id    = ( isset( $instance['swboc_id'] ) ) ? esc_attr( $instance['swboc_id'] ) : '';
 		$swboc_title = ( isset( $instance[ 'title' ] ) ) ? esc_attr( $instance['title'] ) : '';
 		?>
