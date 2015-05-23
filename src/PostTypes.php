@@ -1,14 +1,11 @@
-<?php
+<?php namespace CoenJacobs\SWBOC;
 
-class SWBOC_Common {
-	function SWBOC_Common() {
-		add_action( 'init', array ( $this, 'create_swboc_type' ) );
-		
-		include( 'class-swboc-widget.php' );
-		add_action( 'widgets_init', create_function( '', "register_widget( 'SWBOC_Widget' );" ) );
+class PostTypes {
+	public function __construct() {
+		add_action( 'init', array ( $this, 'create_block_type' ) );
 	}
-	
-	function create_swboc_type() {
+
+	public function create_block_type() {
 		register_post_type( 'smartblock',
 			array(
 				'labels' => array(
@@ -39,7 +36,4 @@ class SWBOC_Common {
 			)
 		);
 	}
-
 }
-
-?>

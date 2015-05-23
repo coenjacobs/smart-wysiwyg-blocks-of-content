@@ -1,0 +1,16 @@
+{
+    "name": "coenjacobs/smart-wysiwyg-blocks-of-content",
+    "description": "Adds a custom post type that can be easily inserted at multiple spots, including widgets. Easy way to create WYSIWYG widgets.",
+    "authors": [
+        {
+            "name": "Coen Jacobs",
+            "email": "coenjacobs@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"CoenJacobs\\SWBOC\\": "src/"}
+    },
+    "require": {
+        "WPUpdatePhp/wp-update-php": "^1.0"
+    }
+}
