@@ -39,5 +39,3 @@ class Front extends Common {
 		return $content;
 	}
 }
-
-?>

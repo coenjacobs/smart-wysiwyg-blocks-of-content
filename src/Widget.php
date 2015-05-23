@@ -81,5 +81,3 @@ class Widget extends \WP_Widget {
 	<?php
 	}
 }
-
-?>

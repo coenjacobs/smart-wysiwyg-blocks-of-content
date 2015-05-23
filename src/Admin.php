@@ -17,5 +17,3 @@ class Admin extends Common {
 		}
 	}
 }
-
-?>

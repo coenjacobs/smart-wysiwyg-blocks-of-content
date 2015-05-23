@@ -15,5 +15,3 @@ if ( is_admin() ) {
 	include( 'includes/class-swboc-front.php' );
 	$SWBOC_Front = new SWBOC_Front();	
 }
-
-?>

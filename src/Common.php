@@ -11,5 +11,3 @@ class Common {
 		register_widget( 'CoenJacobs\SWBOC\Widget' );
 	}
 }
-
-?>
