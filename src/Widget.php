@@ -3,7 +3,8 @@
 class Widget extends \WP_Widget {
 	public function SWBOC_Widget() {
 		$widget_ops = array( 'classname' => 'SWBOC_Widget', 'description' => __( 'Widget to show a Smart WYSIWYG Block of Content', 'swboc' ) );
-		$this->WP_Widget( 'swboc', __( 'SWBOC Widget', 'swboc' ), $widget_ops );
+		// $this->WP_Widget( 'swboc', __( 'SWBOC Widget', 'swboc' ), $widget_ops ); // Not supported in later versions of WordPress 4.3.0
+		parent::__construct( 'swboc', __( 'SWBOC Widget', 'swboc' ), $widget_ops ); // Fix for later versions
 	}
 
 	public function widget( $args, $instance ) {
