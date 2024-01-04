@@ -4,14 +4,16 @@ Plugin Name: Smart WYSIWYG Blocks Of Content
 Plugin URI: https://wordpress.org/plugins/smart-wysiwyg-blocks-of-content/
 Description: Adds a custom post type that can be easily inserted at multiple spots, including widgets. Easy way to create WYSIWYG widgets.
 Author: Coen Jacobs
-Version: 1.0.0-bleeding
+Version: 0.6.1
 Author URI: http://coenjacobs.me
 */
 
-require( 'vendor/autoload.php' );
-
 if ( is_admin() ) {
-	new CoenJacobs\SWBOC\Admin();
+	include( 'includes/class-swboc-admin.php' );
+	$SWBOC_Admin = new SWBOC_Admin();
 } else {
-	new CoenJacobs\SWBOC\Front();	
+    include( 'includes/class-swboc-front.php' );
+	$SWBOC_Front = new SWBOC_Front();	
 }
+
+?>
