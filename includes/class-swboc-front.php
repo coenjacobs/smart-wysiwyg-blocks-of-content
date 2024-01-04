@@ -15,7 +15,6 @@ class SWBOC_Front {
 	}
 	
 	function swboc_shortcode( $atts ) {
-        var_dump('is this working');
 		extract( shortcode_atts( array (
 			'id' => '',
 		), $atts ) );
