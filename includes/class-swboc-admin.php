@@ -1,13 +1,20 @@
-<?php namespace CoenJacobs\SWBOC;
+<?php
 
-class Admin extends Common {	
-	public function __construct() {
-		parent::__construct();
+class SWBOC_Admin {
+	private $common;
+
+    public function __construct() {
+        $this->SWBOC_Admin();
+    }
+	
+	function SWBOC_Admin() {
+		include( 'class-swboc-common.php' );
+		$this->common = new SWBOC_Common();
 		
 		add_action( 'admin_init', array ( $this, 'update_swboc_database' ) );
 	}
 	
-	public function update_swboc_database() {
+	function update_swboc_database() {
 		$db_version = get_option( 'swboc_database_version' );
 	
 		if ( $db_version != '' || $db_version < 2 ) {
@@ -17,3 +24,5 @@ class Admin extends Common {
 		}
 	}
 }
+
+?>

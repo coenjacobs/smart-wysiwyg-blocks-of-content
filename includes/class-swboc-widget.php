@@ -1,17 +1,28 @@
-<?php namespace CoenJacobs\SWBOC;
+<?php
 
-class Widget extends \WP_Widget {
-	public function SWBOC_Widget() {
-		$widget_ops = array( 'classname' => 'SWBOC_Widget', 'description' => __( 'Widget to show a Smart WYSIWYG Block of Content', 'swboc' ) );
-		$this->WP_Widget( 'swboc', __( 'SWBOC Widget', 'swboc' ), $widget_ops );
+class SWBOC_Widget extends WP_Widget {
+    public function __construct()
+    {
+        parent::__construct(
+            'smart-block',  // Base ID
+            'Smart Block'   // Name
+        );
+        add_action('widgets_init', function () {
+            register_widget('SWBOC_Widget');
+        });
+    }
+
+	function SWBOC_Widget() {
+		$widget_ops = array( 'classname' => 'SWBOC_Widget', 'description' => 'Widget to show a Smart WYSIWYG Block of Content' );
+		$this->WP_Widget( 'swboc', 'SWBOC Widget', $widget_ops );
 	}
 
-	public function widget( $args, $instance ) {
+	function widget( $args, $instance ) {
 		extract( $args, EXTR_SKIP );
 		echo $before_widget;
 		
-		$swboc_id    = ( isset( $instance['swboc_id'] ) ) ? esc_attr( $instance['swboc_id'] ) : '';
-		$swboc_title = ( isset( $instance[ 'title' ] ) ) ? esc_attr( $instance['title'] ) : '';
+		$swboc_id    = ( isset( $instance[ 'swboc_id' ] ) ) ? esc_attr( $instance[ 'swboc_id' ] ) : '';
+		$swboc_title = ( isset( $instance[ 'title' ] ) ) ? esc_attr( $instance[ 'title' ] ) : '';
 		
 		if ( ! empty( $swboc_title ) )
 			echo $before_title . $swboc_title . $after_title;
@@ -34,7 +45,7 @@ class Widget extends \WP_Widget {
 		echo $after_widget;
 	}
 
-	public function update( $new_instance, $old_instance ) {
+	function update( $new_instance, $old_instance ) {
 		$this->title = esc_attr( $instance[ 'title' ] );
 		
 		$updated_instance = $new_instance;
@@ -42,15 +53,15 @@ class Widget extends \WP_Widget {
 		return $updated_instance;
 	}
 
-	public function form( $instance ) {
-		$swboc_id    = ( isset( $instance['swboc_id'] ) ) ? esc_attr( $instance['swboc_id'] ) : '';
-		$swboc_title = ( isset( $instance[ 'title' ] ) ) ? esc_attr( $instance['title'] ) : '';
+	function form( $instance ) {
+		$swboc_id    = ( isset( $instance[ 'swboc_id' ] ) ) ? esc_attr( $instance[ 'swboc_id' ] ) : '';
+		$swboc_title = ( isset( $instance[ 'title' ] ) ) ? esc_attr( $instance[ 'title' ] ) : '';
 		?>
 		
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'swboc' ); ?>
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>">Title:
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $swboc_title; ?>" /></label>
 		
-		<label for="<?php echo $this->get_field_id( 'swboc_id' ); ?>"><?php _e( 'Smart block:', 'swboc' ); ?>
+		<label for="<?php echo $this->get_field_id( 'swboc_id' ); ?>">Smart block:
 		<select class="widefat" id="<?php echo $this->get_field_id( 'swboc_id'); ?>" name="<?php echo $this->get_field_name( 'swboc_id' ); ?>">
 		
 		<?php
@@ -81,3 +92,5 @@ class Widget extends \WP_Widget {
 	<?php
 	}
 }
+
+?>
